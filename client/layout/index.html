@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>BackToBasic</title>
+  </head>
+<body>
+  <div id="app">
+
+    <!-- Start login -->
+    <section>
+      <div class="container-fluid">
+        <div class="row mx-3">
+          <div class="d-flex justify-content-center align-items-center" style="height: 650px;">
+            <div class="col-sm-4">
+              <h2 class="text-center">BackToBasic-CMS</h2>
+              <hr>
+              <h1 class="text-center">LOGIN</h1>
+              <div class="col-sm-8 offset-sm-2">
+                <label for="inputEmail" class="visually-hidden">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <label for="inputPassword" class="visually-hidden">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                
+                <div class="d-flex justify-content-center">
+                  <div class="mt-2">
+                      <a href="#" class="btn my-1 px-3 shadow bg-primary color-secondary">Login</a>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="mt-2">
+                        <a href="#" class="btn my-1 shadow bg-primary color-secondary">Register</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End login -->
+
+    <!-- Start Add Product -->
+    <section>
+      <div id="add-task-page">
+          <div class="container-fluid">
+              <!-- Masukin overlay di sini -->
+              <div class="">
+                  
+                  <div class="row mx-3">
+                      <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                          <div class="col-sm-4">
+                              <div class="card mt-3 mb-5 shadow-lg">
+                                  <div class="card-header d-flex justify-content-between">
+                                      <p class="medium-text ms-2">Add Product</p>
+                                      <!-- Close button -->
+                                      <a type="button" class="btn-close me-2" aria-label="Close"></a>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="form-floating mb-3">
+                                          <input type="text" class="form-control" id="product-name" placeholder="Product Name">
+                                          <label for="product-name">Product Name</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                          <input type="text" class="form-control" id="category" placeholder="Product Category">
+                                          <label for="category">Category</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="stock" placeholder="Stock">
+                                        <label for="stock">Stock</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="price" placeholder="Price">
+                                        <label for="price">Price</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="url" class="form-control" id="image_url" placeholder="Image URL">
+                                        <label for="image_url">Image URL</label>
+                                      </div>
+
+                                      <div class="d-flex justify-content-center">
+                                          <div class="mt-2">
+                                              <a href="#" class="btn medium-button my-1 px-4 shadow bg-primary color-secondary" @click.prevent="addTask">Submit</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- End Add Product -->
+
+    <!-- Start Edit Product -->
+    <section>
+      <div id="add-task-page">
+          <div class="container-fluid">
+              <!-- Masukin overlay di sini -->
+              <div class="">
+                  
+                  <div class="row mx-3">
+                      <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                          <div class="col-sm-4">
+                              <div class="card mt-3 mb-5 shadow-lg">
+                                  <div class="card-header d-flex justify-content-between">
+                                      <p class="medium-text ms-2">Edit Product</p>
+                                      <!-- Close button -->
+                                      <a type="button" class="btn-close me-2" aria-label="Close"></a>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="form-floating mb-3">
+                                          <input type="text" class="form-control" id="product-name" placeholder="Product Name">
+                                          <label for="product-name">Product Name</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                          <input type="text" class="form-control" id="category" placeholder="Product Category">
+                                          <label for="category">Category</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="stock" placeholder="Stock">
+                                        <label for="stock">Stock</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="price" placeholder="Price">
+                                        <label for="price">Price</label>
+                                      </div>
+
+                                      <div class="form-floating mb-3">
+                                        <input type="url" class="form-control" id="image_url" placeholder="Image URL">
+                                        <label for="image_url">Image URL</label>
+                                      </div>
+
+                                      <div class="d-flex justify-content-center">
+                                          <div class="mt-2">
+                                              <a href="#" class="btn medium-button my-1 px-4 shadow bg-primary color-secondary" @click.prevent="addTask">Submit</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- End Edit Product -->
+
+    <!-- Start Headers -->
+    <header class="navbar navbar-light sticky-top bg-dark py-3 shadow">
+      <button class="navbar-toggler position-absolute d-sm-none collapsed mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav px-3 ms-auto">
+        <li class="nav-item">
+          <a class="navbar-brand color-secondary" href="#">BackToBasic</a>
+        </li>
+      </ul>
+    </header>
+    <!-- End Headers -->
+
+    <!-- Start homepage -->
+    <div class="container-fluid">
+
+      <div class="row">
+        <!-- Start sidebar nav - Left Side -->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="height: 50vw;">
+          
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                  </svg>
+                  Add Product
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                    <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                  </svg>
+                  Banners
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                  </svg>
+                  Add Banner
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color-red" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                  </svg>
+                  Logout
+                </a>
+              </li>
+            </ul>
+
+        </nav>
+        <!-- End sidebar nav - Left Side -->
+
+        <!-- Start Main Content - Right Side -->
+        <section class="col-md-9 ms-sm-auto col-lg-10 px-md-4 overflow-auto" style="height: 500px;">
+
+          
+          <!-- Start Table -->
+          <h1 class="text-center mt-2 mb-2">Dashboard</h1>
+          
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr class="align-middle text-center">
+                  <th>No</th>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr class="align-middle text-center">
+                  <td style="word-wrap: break-word;min-width: 20px;max-width: 30px;">1</td>
+                  <td class="img-fluid" style="word-wrap: break-word;min-width: 250px;max-width: 250px;"><img src="https://www.allbasicstore.com/wp-content/uploads/2018/12/cream.jpg" alt="" style="width: 200px;" class="rounded shadow-sm"></td>
+                  <td style="word-wrap: break-word;min-width: 100px;max-width: 100px;">Short pants</td>
+                  <td style="word-wrap: break-word;min-width: 100px;max-width: 100px;">pants</td>
+                  <td style="word-wrap: break-word;min-width: 100px;max-width: 100px;">Rp120,000</td>
+                  <td style="word-wrap: break-word;min-width: 100px;max-width: 100px;">50</td>
+                  <td style="word-wrap: break-word;min-width: 50px;max-width: 50px;">42</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <!-- End Table -->
+
+      </section>
+      <!-- End Main Content - Right Side -->
+
+    </div>
+    <!-- End homepage -->
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </div>
+</body>
+</html>

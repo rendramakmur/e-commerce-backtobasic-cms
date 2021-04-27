@@ -1,0 +1,89 @@
+body {
+  background-color: #FFEF00;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  margin: 0;
+  color: #353535;
+}
+
+a {
+  text-decoration: none;
+  color: #FFEF00;
+}
+
+a:hover {
+  color: #353535;
+}
+
+.color-red {
+  color: #DB382D !important;
+}
+
+.color-white {
+  color: #FFFF !important;
+}
+
+.color-primary {
+  color: #00A8FF !important;
+}
+
+.color-secondary {
+  color: #FFEF00 !important;
+}
+
+.bg-red {
+  background-color: #DB382D !important;
+}
+
+.bg-white {
+  background-color: #FFFF !important;
+}
+
+.bg-primary {
+  background-color: #00A8FF !important;
+}
+
+.bg-secondary {
+  background-color: #FFEF00 !important;
+}
+
+.navbar-light {
+  background-color: #00A8FF !important;
+}
+
+.bg-light {
+  background-color: #00A8FF !important;
+}
+
+.very-small-text {
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 16px;
+}
+
+.medium-text {
+  font-size: 18px;
+}
+
+.large-text {
+  font-size: 24px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
